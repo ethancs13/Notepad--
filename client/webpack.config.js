@@ -30,6 +30,7 @@ module.exports = () => {
       new InjectManifest({
         // Pathname to service worker.
         swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }),
 
       // Creates manifest.json file.
@@ -37,6 +38,8 @@ module.exports = () => {
         name: 'JATE',
         short_name: 'JATE',
         description: 'Text editor',
+        fingerprints: false,
+        inject: true,
         background_color: '#000000',
         theme_color: '#000000',
         start_url: './',
@@ -69,7 +72,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env'],
+              presets: ['@babel/env'],
               plugins: [
                 // Allows use of rest and spread syntax.
                 '@babel/plugin-proposal-object-rest-spread',

@@ -3,6 +3,8 @@ const butInstall = document.getElementById('buttonInstall');
 // Logic for installing the PWA
 // TODO: Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
+
+    console.log("before install running")
     // Saves event in global variable.
     // store for later
     window.deferredPrompt = event;
