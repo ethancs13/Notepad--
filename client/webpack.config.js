@@ -69,7 +69,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset.env'],
+              presets: ['@babel/preset-env'],
               plugins: [
                 // Allows use of rest and spread syntax.
                 '@babel/plugin-proposal-object-rest-spread',
